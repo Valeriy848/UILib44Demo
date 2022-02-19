@@ -1,0 +1,3 @@
+[submodule "External/UILib44"]
+	path = External/UILib44
+	url = git@github.com:Valeriy848/UILib44.git
