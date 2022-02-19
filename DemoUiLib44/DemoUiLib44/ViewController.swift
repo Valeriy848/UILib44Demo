@@ -10,8 +10,13 @@ import UILib44
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var modeSwitcher: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = CustomColors.indigo.color
+    }
+    
+    @IBAction func onShowTap(_ sender: Any) {
+        print("Show")
     }
 }
