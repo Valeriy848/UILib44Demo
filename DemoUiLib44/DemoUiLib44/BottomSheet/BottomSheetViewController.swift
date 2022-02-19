@@ -15,7 +15,7 @@ internal final class BottomSheetViewController: UIViewController, UIGestureRecog
     private let bottomSheetHeight: CGFloat
     private var topConstraint: NSLayoutConstraint!
 
-    private let content = BottomSheetView()
+    private let navigation: UINavigationController
     private let bottomSheetView = UIView()
     
     private let backgroundView: UIView = {
@@ -49,7 +49,8 @@ internal final class BottomSheetViewController: UIViewController, UIGestureRecog
         let screenHeight = UIScreen.main.bounds.height
         
         bottomSheetHeight = screenHeight - topSafeAreaInsets
-
+        navigation = UINavigationController(rootViewController: MenuViewController())
+        
         super.init(nibName: nil, bundle: nil)
 
         modalPresentationStyle = .overFullScreen
@@ -99,17 +100,18 @@ internal final class BottomSheetViewController: UIViewController, UIGestureRecog
             dragElement.topAnchor.constraint(equalTo: bottomSheetView.topAnchor),
             dragElement.centerXAnchor.constraint(equalTo: bottomSheetView.centerXAnchor)
         ])
+        
+        navigation.view.layer.cornerRadius = Metrics.cornerRadius
+        navigation.view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        navigation.view.clipsToBounds = true
 
-        content.layer.cornerRadius = Metrics.cornerRadius
-        content.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        content.clipsToBounds = true
-
-        bottomSheetView.addSubview(content)
+        navigation.view.translatesAutoresizingMaskIntoConstraints = false
+        bottomSheetView.addSubview(navigation.view)
         NSLayoutConstraint.activate([
-            content.topAnchor.constraint(equalTo: dragElement.bottomAnchor),
-            content.bottomAnchor.constraint(equalTo: bottomSheetView.bottomAnchor),
-            content.leadingAnchor.constraint(equalTo: bottomSheetView.leadingAnchor),
-            content.trailingAnchor.constraint(equalTo: bottomSheetView.trailingAnchor),
+            navigation.view.topAnchor.constraint(equalTo: dragElement.bottomAnchor),
+            navigation.view.bottomAnchor.constraint(equalTo: bottomSheetView.bottomAnchor),
+            navigation.view.leadingAnchor.constraint(equalTo: bottomSheetView.leadingAnchor),
+            navigation.view.trailingAnchor.constraint(equalTo: bottomSheetView.trailingAnchor)
         ])
     }
 

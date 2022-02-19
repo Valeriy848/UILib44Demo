@@ -10,13 +10,13 @@ import UILib44
 
 internal final class ViewController: UIViewController {
 
-    @IBOutlet weak var modeSwitcher: UISegmentedControl!
+    @IBOutlet private weak var modeSwitcher: UISegmentedControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
-    @IBAction func onShowTap(_ sender: Any) {
+    @IBAction private func onShowTap(_ sender: Any) {
         let bottomSheet = BottomSheetViewController(mode: calculateMode())
         present(bottomSheet, animated: false, completion: nil)
     }
