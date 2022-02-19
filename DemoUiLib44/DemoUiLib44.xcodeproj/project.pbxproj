@@ -10,6 +10,7 @@
 		3C0696FE27C0F8B80046EB03 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0696FD27C0F8B80046EB03 /* BottomSheetViewController.swift */; };
 		3C06970927C10C420046EB03 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C06970827C10C420046EB03 /* BottomSheetView.swift */; };
 		3C06970B27C122A30046EB03 /* Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C06970A27C122A30046EB03 /* Metrics.swift */; };
+		3C06971127C131AF0046EB03 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C06971027C131AF0046EB03 /* Colors.swift */; };
 		3CA14C1B27C016B800E6FE2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA14C1A27C016B800E6FE2E /* AppDelegate.swift */; };
 		3CA14C1D27C016B800E6FE2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA14C1C27C016B800E6FE2E /* SceneDelegate.swift */; };
 		3CA14C1F27C016B800E6FE2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA14C1E27C016B800E6FE2E /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 		3C0696FD27C0F8B80046EB03 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
 		3C06970827C10C420046EB03 /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
 		3C06970A27C122A30046EB03 /* Metrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metrics.swift; sourceTree = "<group>"; };
+		3C06971027C131AF0046EB03 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		3C687E8327C0CD0E003EF6D2 /* UILib44.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UILib44.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA14C1727C016B800E6FE2E /* DemoUiLib44.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoUiLib44.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA14C1A27C016B800E6FE2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,14 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		3C06970F27C131980046EB03 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				3C06971027C131AF0046EB03 /* Colors.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
 		3CA14C0E27C016B800E6FE2E = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +135,7 @@
 				3C06970D27C125FB0046EB03 /* Main */,
 				3C06970E27C126170046EB03 /* Helpers */,
 				3C06970327C0F8DD0046EB03 /* BottomSheet */,
+				3C06970F27C131980046EB03 /* Elements */,
 			);
 			path = DemoUiLib44;
 			sourceTree = "<group>";
@@ -214,6 +225,7 @@
 				3CA14C1F27C016B800E6FE2E /* ViewController.swift in Sources */,
 				3C06970B27C122A30046EB03 /* Metrics.swift in Sources */,
 				3CA14C1B27C016B800E6FE2E /* AppDelegate.swift in Sources */,
+				3C06971127C131AF0046EB03 /* Colors.swift in Sources */,
 				3CA14C1D27C016B800E6FE2E /* SceneDelegate.swift in Sources */,
 				3C06970927C10C420046EB03 /* BottomSheetView.swift in Sources */,
 				3C0696FE27C0F8B80046EB03 /* BottomSheetViewController.swift in Sources */,
