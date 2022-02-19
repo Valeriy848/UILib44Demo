@@ -8,10 +8,24 @@
 import UIKit
 import UILib44
 
-class ViewController: UIViewController {
+internal final class ViewController: UIViewController {
+
+    @IBOutlet weak var modeSwitcher: UISegmentedControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = CustomColors.indigo.color
+    }
+
+    @IBAction func onShowTap(_ sender: Any) {
+        let bottomSheet = BottomSheetViewController(mode: calculateMode())
+        present(bottomSheet, animated: false, completion: nil)
+    }
+    
+    private func calculateMode() -> UIUserInterfaceStyle {
+        switch modeSwitcher.selectedSegmentIndex {
+        case 1: return .light
+        case 2: return .dark
+        default: return .unspecified
+        }
     }
 }
