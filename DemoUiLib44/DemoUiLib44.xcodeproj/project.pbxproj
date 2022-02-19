@@ -13,7 +13,23 @@
 		3CA14C2227C016B800E6FE2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CA14C2027C016B800E6FE2E /* Main.storyboard */; };
 		3CA14C2427C016B900E6FE2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CA14C2327C016B900E6FE2E /* Assets.xcassets */; };
 		3CA14C2727C016B900E6FE2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CA14C2527C016B900E6FE2E /* LaunchScreen.storyboard */; };
+		3CA713EA27C0D6EC0091940C /* UILib44.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA713E927C0D6EC0091940C /* UILib44.framework */; };
+		3CA713EB27C0D6EC0091940C /* UILib44.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA713E927C0D6EC0091940C /* UILib44.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3CA713EC27C0D6ED0091940C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3CA713EB27C0D6EC0091940C /* UILib44.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3C687E8327C0CD0E003EF6D2 /* UILib44.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UILib44.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +42,7 @@
 		3CA14C2627C016B900E6FE2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CA14C2827C016B900E6FE2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CA14C2F27C0178E00E6FE2E /* UILib44.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UILib44.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CA713E927C0D6EC0091940C /* UILib44.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UILib44.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CA713EA27C0D6EC0091940C /* UILib44.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +91,7 @@
 		3CA14C2E27C0178E00E6FE2E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3CA713E927C0D6EC0091940C /* UILib44.framework */,
 				3C687E8327C0CD0E003EF6D2 /* UILib44.framework */,
 				3CA14C2F27C0178E00E6FE2E /* UILib44.framework */,
 			);
@@ -89,6 +108,7 @@
 				3CA14C1327C016B800E6FE2E /* Sources */,
 				3CA14C1427C016B800E6FE2E /* Frameworks */,
 				3CA14C1527C016B800E6FE2E /* Resources */,
+				3CA713EC27C0D6ED0091940C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

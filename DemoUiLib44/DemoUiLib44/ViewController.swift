@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import UILib44
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = CustomColors.indigo.color
     }
 }
