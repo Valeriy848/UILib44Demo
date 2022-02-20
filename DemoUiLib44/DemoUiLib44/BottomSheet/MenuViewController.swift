@@ -12,6 +12,8 @@ internal final class MenuViewController: UIViewController, UITableViewDelegate, 
     
     // MARK: - Properties
     
+    private let menu = [Colors(), Icons()]
+    
     private let cellID = "Cell"
     
     private let tableView: UITableView = {
@@ -53,17 +55,17 @@ internal final class MenuViewController: UIViewController, UITableViewDelegate, 
     // MARK: - UITableView methods
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return menu.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath as IndexPath)
-        cell.textLabel?.text = "Colors"
+        cell.textLabel?.text = String(describing: type(of: menu[indexPath.row].self))
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        navigationController?.pushViewController(Colors(), animated: true)
+        navigationController?.pushViewController(menu[indexPath.row], animated: true)
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C0505F027C22748008E49C0 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0505EF27C22748008E49C0 /* Icons.swift */; };
 		3C0696FE27C0F8B80046EB03 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0696FD27C0F8B80046EB03 /* BottomSheetViewController.swift */; };
 		3C06970927C10C420046EB03 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C06970827C10C420046EB03 /* MenuViewController.swift */; };
 		3C06970B27C122A30046EB03 /* Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C06970A27C122A30046EB03 /* Metrics.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3C0505EF27C22748008E49C0 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		3C0696FD27C0F8B80046EB03 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
 		3C06970827C10C420046EB03 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		3C06970A27C122A30046EB03 /* Metrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metrics.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				3C06971027C131AF0046EB03 /* Colors.swift */,
+				3C0505EF27C22748008E49C0 /* Icons.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			files = (
 				3CA14C1F27C016B800E6FE2E /* ViewController.swift in Sources */,
 				3C06970B27C122A30046EB03 /* Metrics.swift in Sources */,
+				3C0505F027C22748008E49C0 /* Icons.swift in Sources */,
 				3CA14C1B27C016B800E6FE2E /* AppDelegate.swift in Sources */,
 				3C06971127C131AF0046EB03 /* Colors.swift in Sources */,
 				3CA14C1D27C016B800E6FE2E /* SceneDelegate.swift in Sources */,
