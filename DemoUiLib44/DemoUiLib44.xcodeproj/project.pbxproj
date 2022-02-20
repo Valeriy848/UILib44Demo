@@ -11,7 +11,6 @@
 		3C0505F227C22DF8008E49C0 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0505F127C22DF8008E49C0 /* Strings.swift */; };
 		3C0696FE27C0F8B80046EB03 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0696FD27C0F8B80046EB03 /* BottomSheetViewController.swift */; };
 		3C06970927C10C420046EB03 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C06970827C10C420046EB03 /* MenuViewController.swift */; };
-		3C06970B27C122A30046EB03 /* Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C06970A27C122A30046EB03 /* Metrics.swift */; };
 		3C06971127C131AF0046EB03 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C06971027C131AF0046EB03 /* Colors.swift */; };
 		3CA14C1B27C016B800E6FE2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA14C1A27C016B800E6FE2E /* AppDelegate.swift */; };
 		3CA14C1D27C016B800E6FE2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA14C1C27C016B800E6FE2E /* SceneDelegate.swift */; };
@@ -21,6 +20,7 @@
 		3CA14C2727C016B900E6FE2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CA14C2527C016B900E6FE2E /* LaunchScreen.storyboard */; };
 		3CA713EA27C0D6EC0091940C /* UILib44.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA713E927C0D6EC0091940C /* UILib44.framework */; };
 		3CA713EB27C0D6EC0091940C /* UILib44.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA713E927C0D6EC0091940C /* UILib44.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3CD1C28927C24DE40079932A /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1C28827C24DE40079932A /* Input.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,7 +42,6 @@
 		3C0505F127C22DF8008E49C0 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		3C0696FD27C0F8B80046EB03 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
 		3C06970827C10C420046EB03 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		3C06970A27C122A30046EB03 /* Metrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metrics.swift; sourceTree = "<group>"; };
 		3C06971027C131AF0046EB03 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		3C687E8327C0CD0E003EF6D2 /* UILib44.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UILib44.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA14C1727C016B800E6FE2E /* DemoUiLib44.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoUiLib44.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +54,7 @@
 		3CA14C2827C016B900E6FE2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CA14C2F27C0178E00E6FE2E /* UILib44.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UILib44.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA713E927C0D6EC0091940C /* UILib44.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UILib44.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CD1C28827C24DE40079932A /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +102,6 @@
 		3C06970E27C126170046EB03 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				3C06970A27C122A30046EB03 /* Metrics.swift */,
 				3C0505F127C22DF8008E49C0 /* Strings.swift */,
 			);
 			path = Helpers;
@@ -113,6 +112,7 @@
 			children = (
 				3C06971027C131AF0046EB03 /* Colors.swift */,
 				3C0505EF27C22748008E49C0 /* Icons.swift */,
+				3CD1C28827C24DE40079932A /* Input.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -230,8 +230,8 @@
 			files = (
 				3CA14C1F27C016B800E6FE2E /* ViewController.swift in Sources */,
 				3C0505F227C22DF8008E49C0 /* Strings.swift in Sources */,
-				3C06970B27C122A30046EB03 /* Metrics.swift in Sources */,
 				3C0505F027C22748008E49C0 /* Icons.swift in Sources */,
+				3CD1C28927C24DE40079932A /* Input.swift in Sources */,
 				3CA14C1B27C016B800E6FE2E /* AppDelegate.swift in Sources */,
 				3C06971127C131AF0046EB03 /* Colors.swift in Sources */,
 				3CA14C1D27C016B800E6FE2E /* SceneDelegate.swift in Sources */,
