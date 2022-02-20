@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3C0505F027C22748008E49C0 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0505EF27C22748008E49C0 /* Icons.swift */; };
+		3C0505F227C22DF8008E49C0 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0505F127C22DF8008E49C0 /* Strings.swift */; };
 		3C0696FE27C0F8B80046EB03 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0696FD27C0F8B80046EB03 /* BottomSheetViewController.swift */; };
 		3C06970927C10C420046EB03 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C06970827C10C420046EB03 /* MenuViewController.swift */; };
 		3C06970B27C122A30046EB03 /* Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C06970A27C122A30046EB03 /* Metrics.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		3C0505EF27C22748008E49C0 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
+		3C0505F127C22DF8008E49C0 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		3C0696FD27C0F8B80046EB03 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
 		3C06970827C10C420046EB03 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		3C06970A27C122A30046EB03 /* Metrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metrics.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				3C06970A27C122A30046EB03 /* Metrics.swift */,
+				3C0505F127C22DF8008E49C0 /* Strings.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -136,9 +139,9 @@
 			children = (
 				3C06970C27C125EF0046EB03 /* Application */,
 				3C06970D27C125FB0046EB03 /* Main */,
-				3C06970E27C126170046EB03 /* Helpers */,
 				3C06970327C0F8DD0046EB03 /* BottomSheet */,
 				3C06970F27C131980046EB03 /* Elements */,
+				3C06970E27C126170046EB03 /* Helpers */,
 			);
 			path = DemoUiLib44;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CA14C1F27C016B800E6FE2E /* ViewController.swift in Sources */,
+				3C0505F227C22DF8008E49C0 /* Strings.swift in Sources */,
 				3C06970B27C122A30046EB03 /* Metrics.swift in Sources */,
 				3C0505F027C22748008E49C0 /* Icons.swift in Sources */,
 				3CA14C1B27C016B800E6FE2E /* AppDelegate.swift in Sources */,
