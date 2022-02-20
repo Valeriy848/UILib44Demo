@@ -12,7 +12,7 @@ internal final class MenuViewController: UIViewController, UITableViewDelegate, 
     
     // MARK: - Properties
     
-    private let menu = [Colors(), Icons(), Input()]
+    private let menu = [Colors(), Icons(), Input(), CustomButton()]
     
     private let cellID = "Cell"
     
