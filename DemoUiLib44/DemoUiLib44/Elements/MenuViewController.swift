@@ -12,7 +12,7 @@ internal final class MenuViewController: UIViewController, UITableViewDelegate, 
     
     // MARK: - Properties
     
-    private let menu = [Colors(), Icons(), Input(), CustomButton()]
+    private let menu = ["Colors", "Icons", "Input", "Button"]
     
     private let cellID = "Cell"
     
@@ -30,9 +30,6 @@ internal final class MenuViewController: UIViewController, UITableViewDelegate, 
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
         tableView.delegate = self
         tableView.dataSource = self
-        
-        title = "UILib elements"
-        
         setupUI()
     }
 
@@ -41,6 +38,9 @@ internal final class MenuViewController: UIViewController, UITableViewDelegate, 
     }
     
     private func setupUI() {
+        title = "UILib elements"
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
+        
         view.backgroundColor = CustomColors.levelZero.color
   
         view.addSubview(tableView)
@@ -60,12 +60,23 @@ internal final class MenuViewController: UIViewController, UITableViewDelegate, 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath as IndexPath)
-        cell.textLabel?.text = String(describing: type(of: menu[indexPath.row].self))
+        cell.textLabel?.text = menu[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        navigationController?.pushViewController(menu[indexPath.row], animated: true)
+        
+        let controller: UIViewController
+        
+        switch menu[indexPath.row] {
+        case "Colors": controller = Colors()
+        case "Icons": controller = Icons()
+        case "Input": controller = Input()
+        case "Button": controller = CustomButton()
+        default: fatalError("Unknow UIViewController")
+        }
+        
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
