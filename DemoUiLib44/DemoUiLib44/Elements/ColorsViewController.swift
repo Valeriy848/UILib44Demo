@@ -1,18 +1,18 @@
 //
-//  Icons.swift
+//  ColorsViewController.swift
 //  DemoUiLib44
 //
-//  Created by Valeriy on 20.02.2022.
+//  Created by Valeriy on 19.02.2022.
 //
 
 import UIKit
 import UILib44
 
-internal final class Icons: UIViewController, UITableViewDelegate, UITableViewDataSource {
+internal final class ColorsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     // MARK: - Properties
 
-    private let allIcons = CustomIcons.allImages
+    private let allColors = CustomColors.allColors
     private let cellID = "Cell"
 
     private let tableView: UITableView = {
@@ -50,20 +50,23 @@ internal final class Icons: UIViewController, UITableViewDelegate, UITableViewDa
     // MARK: - TableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return allIcons.count
+        return allColors.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath as IndexPath)
-        let imagerView: UIImageView = {
-            let imagerView = UIImageView(frame: CGRect(x: cell.frame.width - 40, y: 10, width: 24, height: 24))
-            imagerView.image = allIcons[indexPath.row].image
-            imagerView.translatesAutoresizingMaskIntoConstraints = false
-            return imagerView
+        let colorView: UIView = {
+            let colorView = UIView(frame: CGRect(x: cell.frame.width - 40,
+                                                 y: 10,
+                                                 width: cell.frame.height - 20,
+                                                 height: cell.frame.height - 20))
+            colorView.backgroundColor = allColors[indexPath.row].color
+            colorView.translatesAutoresizingMaskIntoConstraints = false
+            return colorView
         }()
         
-        cell.addSubview(imagerView)
-        cell.textLabel?.text = allIcons[indexPath.row].name
+        cell.addSubview(colorView)
+        cell.textLabel?.text = allColors[indexPath.row].name
         
         return cell
     }

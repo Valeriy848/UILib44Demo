@@ -70,10 +70,10 @@ internal final class MenuViewController: UIViewController, UITableViewDelegate, 
         let controller: UIViewController
         
         switch menu[indexPath.row] {
-        case "Colors": controller = Colors()
-        case "Icons": controller = Icons()
-        case "Input": controller = Input()
-        case "Button": controller = CustomButton()
+        case "Colors": controller = ColorsViewController()
+        case "Icons": controller = IconsViewController()
+        case "Input": controller = InputViewController()
+        case "Button": controller = ButtonViewController()
         default: fatalError("Unknow UIViewController")
         }
         

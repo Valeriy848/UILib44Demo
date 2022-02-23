@@ -1,5 +1,5 @@
 //
-//  Input.swift
+//  InputViewController.swift
 //  DemoUiLib44
 //
 //  Created by Valeriy on 20.02.2022.
@@ -8,7 +8,7 @@
 import UIKit
 import UILib44
 
-internal final class Input: UIViewController, FocusObserverDelegate, InputActionDelegate {
+internal final class InputViewController: UIViewController, FocusObserverDelegate, InputActionDelegate {
     
     // MARK: - Properties
     

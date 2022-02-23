@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C0505F027C22748008E49C0 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0505EF27C22748008E49C0 /* Icons.swift */; };
+		3C0505F027C22748008E49C0 /* IconsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0505EF27C22748008E49C0 /* IconsViewController.swift */; };
 		3C0505F227C22DF8008E49C0 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0505F127C22DF8008E49C0 /* Strings.swift */; };
 		3C06970927C10C420046EB03 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C06970827C10C420046EB03 /* MenuViewController.swift */; };
-		3C06971127C131AF0046EB03 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C06971027C131AF0046EB03 /* Colors.swift */; };
+		3C06971127C131AF0046EB03 /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C06971027C131AF0046EB03 /* ColorsViewController.swift */; };
 		3CA14C1B27C016B800E6FE2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA14C1A27C016B800E6FE2E /* AppDelegate.swift */; };
 		3CA14C1D27C016B800E6FE2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA14C1C27C016B800E6FE2E /* SceneDelegate.swift */; };
 		3CA14C1F27C016B800E6FE2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA14C1E27C016B800E6FE2E /* ViewController.swift */; };
@@ -22,8 +22,8 @@
 		3CD175FC27C635E800A53C84 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD175FA27C635E800A53C84 /* BottomSheetViewController.swift */; };
 		3CD175FD27C635E800A53C84 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD175FB27C635E800A53C84 /* BottomSheetView.swift */; };
 		3CD1760327C6765800A53C84 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1760227C6765800A53C84 /* UIView+Ext.swift */; };
-		3CD1C28927C24DE40079932A /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1C28827C24DE40079932A /* Input.swift */; };
-		3CD1C29727C294A40079932A /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1C29627C294A40079932A /* Button.swift */; };
+		3CD1C28927C24DE40079932A /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1C28827C24DE40079932A /* InputViewController.swift */; };
+		3CD1C29727C294A40079932A /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1C29627C294A40079932A /* ButtonViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,10 +41,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3C0505EF27C22748008E49C0 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
+		3C0505EF27C22748008E49C0 /* IconsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsViewController.swift; sourceTree = "<group>"; };
 		3C0505F127C22DF8008E49C0 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		3C06970827C10C420046EB03 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		3C06971027C131AF0046EB03 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		3C06971027C131AF0046EB03 /* ColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
 		3C687E8327C0CD0E003EF6D2 /* UILib44.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UILib44.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA14C1727C016B800E6FE2E /* DemoUiLib44.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoUiLib44.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA14C1A27C016B800E6FE2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,8 +59,8 @@
 		3CD175FA27C635E800A53C84 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
 		3CD175FB27C635E800A53C84 /* BottomSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
 		3CD1760227C6765800A53C84 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
-		3CD1C28827C24DE40079932A /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
-		3CD1C29627C294A40079932A /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		3CD1C28827C24DE40079932A /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		3CD1C29627C294A40079932A /* ButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,10 +118,10 @@
 			isa = PBXGroup;
 			children = (
 				3C06970827C10C420046EB03 /* MenuViewController.swift */,
-				3C06971027C131AF0046EB03 /* Colors.swift */,
-				3C0505EF27C22748008E49C0 /* Icons.swift */,
-				3CD1C28827C24DE40079932A /* Input.swift */,
-				3CD1C29627C294A40079932A /* Button.swift */,
+				3C06971027C131AF0046EB03 /* ColorsViewController.swift */,
+				3C0505EF27C22748008E49C0 /* IconsViewController.swift */,
+				3CD1C28827C24DE40079932A /* InputViewController.swift */,
+				3CD1C29627C294A40079932A /* ButtonViewController.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -240,12 +240,12 @@
 				3CA14C1F27C016B800E6FE2E /* ViewController.swift in Sources */,
 				3CD175FC27C635E800A53C84 /* BottomSheetViewController.swift in Sources */,
 				3C0505F227C22DF8008E49C0 /* Strings.swift in Sources */,
-				3C0505F027C22748008E49C0 /* Icons.swift in Sources */,
-				3CD1C28927C24DE40079932A /* Input.swift in Sources */,
+				3C0505F027C22748008E49C0 /* IconsViewController.swift in Sources */,
+				3CD1C28927C24DE40079932A /* InputViewController.swift in Sources */,
 				3CD175FD27C635E800A53C84 /* BottomSheetView.swift in Sources */,
 				3CA14C1B27C016B800E6FE2E /* AppDelegate.swift in Sources */,
-				3CD1C29727C294A40079932A /* Button.swift in Sources */,
-				3C06971127C131AF0046EB03 /* Colors.swift in Sources */,
+				3CD1C29727C294A40079932A /* ButtonViewController.swift in Sources */,
+				3C06971127C131AF0046EB03 /* ColorsViewController.swift in Sources */,
 				3CD1760327C6765800A53C84 /* UIView+Ext.swift in Sources */,
 				3CA14C1D27C016B800E6FE2E /* SceneDelegate.swift in Sources */,
 				3C06970927C10C420046EB03 /* MenuViewController.swift in Sources */,

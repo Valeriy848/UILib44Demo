@@ -1,5 +1,5 @@
 //
-//  Button.swift
+//  ButtonViewController.swift
 //  DemoUiLib44
 //
 //  Created by Valeriy on 20.02.2022.
@@ -8,7 +8,7 @@
 import UIKit
 import UILib44
 
-internal final class CustomButton: UIViewController, ButtonTappedDelegate {
+internal final class ButtonViewController: UIViewController, ButtonTappedDelegate {
 
     // MARK: - Properties
     
