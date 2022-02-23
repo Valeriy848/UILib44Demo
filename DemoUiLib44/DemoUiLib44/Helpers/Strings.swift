@@ -7,7 +7,4 @@
 
 import Foundation
 
-internal final class Strings {
-    static let ok = "Ок"
-    static let colorNamed = "Название цвета"
-}
+
