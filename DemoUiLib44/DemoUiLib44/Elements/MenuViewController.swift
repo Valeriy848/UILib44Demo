@@ -12,7 +12,7 @@ internal final class MenuViewController: UIViewController, UITableViewDelegate, 
     
     // MARK: - Properties
     
-    private let menu = ["Colors", "Icons", "Input", "Button"]
+    private let menu = Controllers.allCases.map{ String(describing: $0) }
     
     private let cellID = "Cell"
     
@@ -67,16 +67,10 @@ internal final class MenuViewController: UIViewController, UITableViewDelegate, 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let controller: UIViewController
-        
-        switch menu[indexPath.row] {
-        case "Colors": controller = ColorsViewController()
-        case "Icons": controller = IconsViewController()
-        case "Input": controller = InputViewController()
-        case "Button": controller = ButtonViewController()
-        default: fatalError("Unknow UIViewController")
+        if let controller = Controllers(rawValue: menu[indexPath.row]) {
+            navigationController?.pushViewController(controller.viewController, animated: true)
+        } else {
+            fatalError("Unknow ViewController")
         }
-        
-        navigationController?.pushViewController(controller, animated: true)
     }
 }

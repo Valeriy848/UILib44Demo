@@ -11,6 +11,7 @@
 		3C0505F227C22DF8008E49C0 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0505F127C22DF8008E49C0 /* Strings.swift */; };
 		3C06970927C10C420046EB03 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C06970827C10C420046EB03 /* MenuViewController.swift */; };
 		3C06971127C131AF0046EB03 /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C06971027C131AF0046EB03 /* ColorsViewController.swift */; };
+		3C52B1DF27CBF73400BC6AA3 /* Controllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C52B1DE27CBF73400BC6AA3 /* Controllers.swift */; };
 		3CA14C1B27C016B800E6FE2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA14C1A27C016B800E6FE2E /* AppDelegate.swift */; };
 		3CA14C1D27C016B800E6FE2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA14C1C27C016B800E6FE2E /* SceneDelegate.swift */; };
 		3CA14C1F27C016B800E6FE2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA14C1E27C016B800E6FE2E /* ViewController.swift */; };
@@ -45,6 +46,7 @@
 		3C0505F127C22DF8008E49C0 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		3C06970827C10C420046EB03 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		3C06971027C131AF0046EB03 /* ColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
+		3C52B1DE27CBF73400BC6AA3 /* Controllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controllers.swift; sourceTree = "<group>"; };
 		3C687E8327C0CD0E003EF6D2 /* UILib44.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UILib44.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA14C1727C016B800E6FE2E /* DemoUiLib44.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoUiLib44.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA14C1A27C016B800E6FE2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			children = (
 				3C0505F127C22DF8008E49C0 /* Strings.swift */,
 				3CD1760227C6765800A53C84 /* UIView+Ext.swift */,
+				3C52B1DE27CBF73400BC6AA3 /* Controllers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				3C0505F227C22DF8008E49C0 /* Strings.swift in Sources */,
 				3C0505F027C22748008E49C0 /* IconsViewController.swift in Sources */,
 				3CD1C28927C24DE40079932A /* InputViewController.swift in Sources */,
+				3C52B1DF27CBF73400BC6AA3 /* Controllers.swift in Sources */,
 				3CD175FD27C635E800A53C84 /* BottomSheetView.swift in Sources */,
 				3CA14C1B27C016B800E6FE2E /* AppDelegate.swift in Sources */,
 				3CD1C29727C294A40079932A /* ButtonViewController.swift in Sources */,
