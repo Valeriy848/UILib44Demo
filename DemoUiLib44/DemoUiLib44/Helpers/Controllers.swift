@@ -8,17 +8,17 @@
 import UIKit
 
 internal enum Controllers: String, CaseIterable {
-    case Colors
-    case Icons
-    case Input
-    case Button
+    case colors
+    case icons
+    case input
+    case button
 
     var viewController: UIViewController {
         switch self {
-        case .Colors: return ColorsViewController()
-        case .Icons: return IconsViewController()
-        case .Input: return InputViewController()
-        case .Button: return ButtonViewController()
+        case .colors: return ColorsViewController()
+        case .icons: return IconsViewController()
+        case .input: return InputViewController()
+        case .button: return ButtonViewController()
         }
     }
 }

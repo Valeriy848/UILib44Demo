@@ -9,6 +9,8 @@ import UIKit
 
 internal extension Optional where Wrapped == UIView {
     func originalType<T: UIView>() -> T {
+        // swiftlint:disable force_cast
         return self as! T
+        // swiftlint:enable force_cast
     }
 }

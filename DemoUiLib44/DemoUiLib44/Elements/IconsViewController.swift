@@ -9,7 +9,7 @@ import UIKit
 import UILib44
 
 internal final class IconsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
+
     // MARK: - Properties
 
     private let allIcons = CustomIcons.allImages
@@ -20,24 +20,24 @@ internal final class IconsViewController: UIViewController, UITableViewDelegate,
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
-    
+
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
         tableView.delegate = self
         tableView.dataSource = self
-        
+
         setupUI()
     }
-    
-    //MARK: - UI
+
+    // MARK: - UI
 
     private func setupUI() {
         view.backgroundColor = CustomColors.levelZero.color
-  
+
         view.addSubview(tableView)
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -46,13 +46,13 @@ internal final class IconsViewController: UIViewController, UITableViewDelegate,
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
     }
-    
+
     // MARK: - TableView
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return allIcons.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath as IndexPath)
         let imagerView: UIImageView = {
@@ -61,13 +61,13 @@ internal final class IconsViewController: UIViewController, UITableViewDelegate,
             imagerView.translatesAutoresizingMaskIntoConstraints = false
             return imagerView
         }()
-        
+
         cell.addSubview(imagerView)
         cell.textLabel?.text = allIcons[indexPath.row].name
-        
+
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }

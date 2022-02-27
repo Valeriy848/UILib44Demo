@@ -15,7 +15,7 @@ internal protocol BottomSheetViewDelegate: AnyObject {
 internal final class BottomSheetView: UIView, UIGestureRecognizerDelegate {
 
     // MARK: - Properties
-    
+
     private var topConstraint: NSLayoutConstraint!
     private let bottomSheetHeight: CGFloat
     private let safeArea: UIEdgeInsets
@@ -75,7 +75,7 @@ internal final class BottomSheetView: UIView, UIGestureRecognizerDelegate {
 
         topConstraint = contentView.topAnchor.constraint(equalTo: bottomAnchor, constant: 0)
         topConstraint.priority = UILayoutPriority(rawValue: 750)
-        
+
         addSubview(contentView)
         NSLayoutConstraint.activate([
             topConstraint,
@@ -122,9 +122,9 @@ internal final class BottomSheetView: UIView, UIGestureRecognizerDelegate {
             self.topConstraint.constant = 0
             self.shadowView.alpha = 0
             self.layoutIfNeeded()
-        }) { [unowned self] _ in
-            delegate?.onBottomSheetClosed(completion: completion)
-        }
+        }, completion: { [unowned self] _ in
+            self.delegate?.onBottomSheetClosed(completion: completion)
+        })
     }
 
     // MARK: - Gesture actions

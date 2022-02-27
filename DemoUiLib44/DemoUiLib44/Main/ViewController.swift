@@ -22,7 +22,7 @@ internal final class ViewController: UIViewController {
                                                     theme: calculateMode())
         present(bottomSheet, animated: false, completion: nil)
     }
-    
+
     private func calculateMode() -> UIUserInterfaceStyle {
         switch modeSwitcher.selectedSegmentIndex {
         case 1: return .light
