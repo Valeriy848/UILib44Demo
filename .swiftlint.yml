@@ -1,0 +1,13 @@
+# Отключенные правила
+disabled_rules:
+  - todo
+  - type_body_length
+
+# Пути игнорируемые линтером. Приоритет над `included`
+excluded:
+  - App
+  - Pods
+
+# Тип отчета:
+# xcode, json, csv, checkstyle, codeclimate, junit, html, emoji, sonarqube, markdown, github-actions-logging
+reporter: "xcode" 

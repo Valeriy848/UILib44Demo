@@ -175,6 +175,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CA14C2B27C016B900E6FE2E /* Build configuration list for PBXNativeTarget "DemoUiLib44" */;
 			buildPhases = (
+				3C52B1E027CC01B600BC6AA3 /* Swiftlint */,
 				3CA14C1327C016B800E6FE2E /* Sources */,
 				3CA14C1427C016B800E6FE2E /* Frameworks */,
 				3CA14C1527C016B800E6FE2E /* Resources */,
@@ -234,6 +235,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C52B1E027CC01B600BC6AA3 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3CA14C1327C016B800E6FE2E /* Sources */ = {
