@@ -17,10 +17,12 @@ internal final class ViewController: UIViewController {
     }
 
     @IBAction private func onShowTap(_ sender: Any) {
-        let bottomSheet = BottomSheetViewController(mode: calculateMode())
+        let controller = UINavigationController(rootViewController: MenuViewController())
+        let bottomSheet = BottomSheetViewController(controller: controller,
+                                                    theme: calculateMode())
         present(bottomSheet, animated: false, completion: nil)
     }
-    
+
     private func calculateMode() -> UIUserInterfaceStyle {
         switch modeSwitcher.selectedSegmentIndex {
         case 1: return .light

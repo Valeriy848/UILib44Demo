@@ -1,165 +1,75 @@
 //
 //  BottomSheetViewController.swift
-//  PopcornKit
+//  DemoUiLib44
 //
-//  Created by v.pokatilo on 16.09.2021.
+//  Created by Valeriy on 23.02.2022.
 //
 
 import UIKit
-import UILib44
 
-internal final class BottomSheetViewController: UIViewController, UIGestureRecognizerDelegate {
+public final class BottomSheetViewController: UIViewController, BottomSheetViewDelegate {
 
     // MARK: - Properties
 
-    private let bottomSheetHeight: CGFloat
-    private var topConstraint: NSLayoutConstraint!
+    private var bottomSheetView: BottomSheetView {
+        view.originalType()
+    }
+    public override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 
-    private let navigation: UINavigationController
-    private let bottomSheetView = UIView()
-    
-    private let backgroundView: UIView = {
-        let backgroundView = UIView()
-        backgroundView.backgroundColor = CustomColors.gray.color
-        backgroundView.alpha = 0
-        backgroundView.translatesAutoresizingMaskIntoConstraints = false
-        return backgroundView
-    }()
-
-    private let dragElement: UIImageView = {
-        let dragElement = UIImageView()
-        // TODO: - Заменить на иконку из UILib44
-        dragElement.image = UIImage(named: "dragElement")
-        dragElement.tintColor = UIColor.black
-        dragElement.translatesAutoresizingMaskIntoConstraints = false
-        return dragElement
-    }()
-
-    private lazy var panGesture: UIPanGestureRecognizer = {
-        let pan = UIPanGestureRecognizer()
-        pan.addTarget(self, action: #selector(handlePan))
-        return pan
-    }()
-    
     // MARK: - Lifecycle
 
-    init(mode: UIUserInterfaceStyle) {
-        let window = UIApplication.shared.keyWindow
-        let topSafeAreaInsets = window?.safeAreaInsets.top ?? 0
-        let screenHeight = UIScreen.main.bounds.height
-        
-        bottomSheetHeight = screenHeight - topSafeAreaInsets
-        navigation = UINavigationController(rootViewController: MenuViewController())
-        
+    public override func loadView() {
+        view = BottomSheetView()
+        bottomSheetView.delegate = self
+    }
+
+    public init(controller: UIViewController, theme: UIUserInterfaceStyle) {
         super.init(nibName: nil, bundle: nil)
 
+        if #available(iOS 13.0, *) {
+            overrideUserInterfaceStyle = theme
+        }
+
         modalPresentationStyle = .overFullScreen
-        overrideUserInterfaceStyle = mode
+        modalPresentationCapturesStatusBarAppearance = true
+
+        setContent(controller: controller)
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupUI()
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
+    public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        animateBottomSheet()
+        bottomSheetView.animateBottomSheet()
     }
 
-    // MARK: - UI
+    // MARK: - Methods
 
-    private func setupUI() {
-        view.addSubview(backgroundView)
-        NSLayoutConstraint.activate([
-            backgroundView.topAnchor.constraint(equalTo: view.topAnchor),
-            backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-        ])
-        
-        bottomSheetView.addGestureRecognizer(panGesture)
-        bottomSheetView.translatesAutoresizingMaskIntoConstraints = false
-        
-        topConstraint = bottomSheetView.topAnchor.constraint(equalTo: view.bottomAnchor)
-        
-        view.addSubview(bottomSheetView)
-        NSLayoutConstraint.activate([
-            topConstraint,
-            bottomSheetView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            bottomSheetView.leftAnchor.constraint(equalTo: view.leftAnchor),
-            bottomSheetView.rightAnchor.constraint(equalTo: view.rightAnchor)
-        ])
-
-        bottomSheetView.addSubview(dragElement)
-        NSLayoutConstraint.activate([
-            dragElement.topAnchor.constraint(equalTo: bottomSheetView.topAnchor),
-            dragElement.centerXAnchor.constraint(equalTo: bottomSheetView.centerXAnchor)
-        ])
-        
-        navigation.view.layer.cornerRadius = Metrics.cornerRadius
-        navigation.view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        navigation.view.clipsToBounds = true
-
-        navigation.view.translatesAutoresizingMaskIntoConstraints = false
-        bottomSheetView.addSubview(navigation.view)
-        NSLayoutConstraint.activate([
-            navigation.view.topAnchor.constraint(equalTo: dragElement.bottomAnchor),
-            navigation.view.bottomAnchor.constraint(equalTo: bottomSheetView.bottomAnchor),
-            navigation.view.leadingAnchor.constraint(equalTo: bottomSheetView.leadingAnchor),
-            navigation.view.trailingAnchor.constraint(equalTo: bottomSheetView.trailingAnchor)
-        ])
+    private func setContent(controller: UIViewController) {
+        addChild(controller)
+        bottomSheetView.setContent(content: controller.view)
+        controller.didMove(toParent: self)
     }
 
-    // MARK: - Bottom sheet actions
+    // MARK: - Bottom sheet protocol
 
-    private func animateBottomSheet() {
-        view.layoutIfNeeded()
-        UIView.animate(withDuration: Metrics.animationDuration, animations: {
-            self.topConstraint.constant = -self.bottomSheetHeight
-            self.backgroundView.alpha = Metrics.backgroundViewAlpha
-            self.view.layoutIfNeeded()
-        })
-    }
-
-    private func hideBottomSheet() {
-        UIView.animate(withDuration: Metrics.animationDuration) {
-            self.topConstraint.constant = 0
-            self.backgroundView.alpha = 0
-            self.view.layoutIfNeeded()
-        } completion: { _ in
-            self.dismiss(animated: false, completion: nil)
+    public override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
+        if flag {
+            bottomSheetView.hideBottomSheet(completion: completion)
+        } else {
+            super.dismiss(animated: false, completion: completion)
         }
     }
 
-    // MARK: - Gesture actions
-
-    @objc private func handlePan(_ sender: UIPanGestureRecognizer) {
-        let translation = sender.translation(in: bottomSheetView)
-        let yTranslationMagnitude = translation.y.magnitude
-
-        switch sender.state {
-        case .began, .changed:
-            guard translation.y > 0 else { return }
-            topConstraint.constant = yTranslationMagnitude - bottomSheetHeight
-            view.layoutIfNeeded()
-        case .ended:
-            if yTranslationMagnitude >= bottomSheetHeight / 2 {
-                hideBottomSheet()
-            } else {
-                animateBottomSheet()
-            }
-        case .failed:
-            animateBottomSheet()
-        default: break
-        }
+    public func dismiss(animated flag: Bool) {
+        dismiss(animated: flag, completion: nil)
     }
-}
 
-private extension Metrics {
-    static let backgroundViewAlpha: CGFloat = 0.6
+    func onBottomSheetClosed(completion: (() -> Void)?) {
+        dismiss(animated: false, completion: completion)
+    }
 }
